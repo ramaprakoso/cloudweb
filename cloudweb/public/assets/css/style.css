@@ -1,0 +1,73 @@
+/*================================================================================
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+ul.hide-unordered-line-style{
+	padding-left: 0px;
+}
+
+ul.hide-unordered-line-style > li{
+	list-style: none;
+}
+
+td.cell-info{
+	background-color: rgba(245,247,250,.9);
+}
+
+.ball-pulse > div{
+	width: 8px;
+	height: 8px;
+
+	background:#00BCD4;
+}
+
+.bg-activity{
+	background: rgb(245,247,250);
+	border-radius: 5px;	
+
+	box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+}
+
+.bg-planner-activity{
+	background: #CCDEFF;
+	border-radius: 5px;	
+
+	box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+}
+
+.bg-activity-engineer{
+	background: rgb(245,247,250);
+	border-radius: 5px;
+
+	box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+}
+
+.activity-list > .media {
+	border-top: none;
+}
+/* .hasDatepicker {
+    z-index: 1600 !important;
+} */
+
+.border-danger-select2{
+	border: 1px solid red;
+	border-radius: 4px;
+}
+
+.help-block{
+	color: red;
+	font-style: italic;
+}
+
+.modal-backdrop {
+	width: 100% !important;
+	height: 100% !important;
+   }
