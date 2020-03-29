@@ -11,12 +11,27 @@
 |
 */
 
+// Route::get('/login', 'Auth\LoginController@getLogin')->name('login');
+// Route::post('/login', 'Auth\LoginController@postLogin');
+// Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+Auth::routes(['verify' => true]);
+
+
 Route::get('/', function () {
-    return view('pages/home');
+    return redirect()->route('dashboard');
 });
 
-Route::get('/schedule', function () {
-    return view('pages/schedule/index');
-});
 
-Route::get('/', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'ScheduleController@index')->name('dashboard');
+    Route::get('/home', 'HomeController@index')->name('member.home');
+    Route::get('/schedule', 'ScheduleController@index')->name('schedule.index'); 
+    Route::get('/user', 'UserController@index')->name('user.index'); 
+    Route::get('/schedule/data.json', 'ScheduleController@getSchduleJson')->name('schedule.data'); 
+    Route::post('/schedule/post', 'ScheduleController@postSchedule')->name('schedule.post');
+    Route::post('/schedule/delete', 'ScheduleController@deleteSchedule')->name('schedule.delete');
+    
+});

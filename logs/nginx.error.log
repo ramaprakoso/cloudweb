@@ -1,0 +1,1 @@
+2020/03/29 01:11:18 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: , request: "GET /schedule HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "localhost:11303"

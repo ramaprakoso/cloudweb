@@ -9,7 +9,6 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install php7.2-mysql php7.2-gd cron \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
-RUN chown -R www-data:www-data /application
 
 # Install composer
 # RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

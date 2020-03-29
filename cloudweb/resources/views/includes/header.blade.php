@@ -9,7 +9,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand" href=""><img class="brand-logo" alt="modern admin logo" src="{{url('assets/images/logo/logo.png')}}">
-                        <h3 class="brand-text">Project Tracker</h3>
+                        <h3 class="brand-text">Datacomm</h3>
                     </a>
                 </li>
                 <li class="nav-item d-md-none">
@@ -46,14 +46,9 @@
                             <span class="user-name text-bold-700">{{Session::get('fullname')}}&nbsp</span><i class="ft-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#"><i class="ft-user"></i> Edit Profile</a>
-                            <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
-                            <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
-                            <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
-
-                            <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="ft-power"></i> Logout</a>
-                            <form id="logout-form" action="" method="POST" style="display: none;">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         </div>
