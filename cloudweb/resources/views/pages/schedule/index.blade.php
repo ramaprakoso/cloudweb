@@ -36,12 +36,12 @@
                 <table id="table_mtask" class="table table-striped table-bordered default-ordering">
                   <thead>
                     <tr>
-                      <th>No</th>
-                      <th>Materi</th>
-                      <th>Waktu</th>
-                      <th>Link</th>
-                      <th>Requirement</th>
-                      <th>Action</th>
+                    <th style="width:1%">No</th>
+                      <th style="width:20%">Materi</th>
+                      <th style="width:20%">Waktu</th>
+                      <th style="width:20%">Link</th>
+                      <th style="width:30%">Requirement</th>
+                      <th style="width:19%">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -72,7 +72,7 @@
 
 <div class="modal fade text-left modal_form" id="schedule_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel11" aria-hidden="true" style="overflow: scroll">
   <div class="modal-dialog modal-lg" role="document">
-    <form id="schedule_form" method="POST" action="#">
+    <form id="schedule_form" method="POST" action="#" autocomplete="off">
       @csrf
       <div class="modal-content">
         <div class="modal-header bg-info white">
@@ -135,7 +135,7 @@ $(document).ready(function(){
     
 
     $(".modal").on("hidden.bs.modal", function(){
-        
+        $('#schedule_form').trigger("reset");
     });
 
     $(document).on('click', '#btn-update', function(e){

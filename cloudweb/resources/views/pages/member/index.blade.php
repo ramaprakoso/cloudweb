@@ -28,11 +28,11 @@
                 <table id="table_mtask" class="table table-striped table-bordered default-ordering">
                   <thead>
                     <tr>
-                      <th col-1>No</th>
-                      <th>Materi</th>
-                      <th>Waktu</th>
-                      <th>Link</th>
-                      <th>Requirement</th>
+                      <th style="width:1%">No</th>
+                      <th style="width:25%">Materi</th>
+                      <th style="width:20%">Waktu</th>
+                      <th style="width:20%">Link</th>
+                      <th style="width:30%">Requirement</th>
                     </tr>
                   </thead>
                   <tbody>
