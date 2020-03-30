@@ -15,14 +15,11 @@
 // Route::post('/login', 'Auth\LoginController@postLogin');
 // Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-// Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]);
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
 });
-
-
-
 
 // Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'ScheduleController@index')->name('dashboard');
