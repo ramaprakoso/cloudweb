@@ -38,14 +38,16 @@
                   <tbody>
                   @if(count($datas) > 0)
                     @foreach($datas as $data)
+                    <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->description }}</td>
                         <td>{{ $data->time_schedule }}</td>
                         <td>{{ $data->url }}</td>
                         <td>{{ $data->requirement }}</td>
+                    </tr>
                     @endforeach
                   @else
-                  <td colspan="5">Data Not Found</td>
+                  <tr><td colspan="5">Data Not Found</td></tr>
                   @endif
                   </tbody>
                 </table>

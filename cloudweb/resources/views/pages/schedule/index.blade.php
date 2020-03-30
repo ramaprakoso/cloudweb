@@ -47,6 +47,7 @@
                   <tbody>
                   @if(count($datas) > 0)
                   @foreach($datas as $data)
+                  <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->description }}</td>
                     <td>{{ $data->time_schedule }}</td>
@@ -54,9 +55,12 @@
                     <td>{{ $data->requirement }}</td>
                     <td><button id="btn-update" data-id="{{$data->id}}" type="button" class="btn btn-sm btn-warning"><i class="ft-edit-2"></i></button>
                      <button id="btn-delete" data-id="{{$data->id}}" type="button" class="btn btn-sm btn-danger"><i class="ft-trash-2"></i></button></td>
-                  @endforeach
+                  </tr>
+                     @endforeach
                   @else
-                  <td colspan="6">Data Not Found</td>
+                  <tr>
+                   <td colspan="6">Data Not Found</td>
+                  </tr>
                   @endif
                   </tbody>
                 </table>
