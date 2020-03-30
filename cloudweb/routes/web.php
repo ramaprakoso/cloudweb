@@ -21,7 +21,7 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
-// Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'ScheduleController@index')->name('dashboard');
     Route::get('/home', 'HomeController@index')->name('member.home');
     Route::get('/schedule', 'ScheduleController@index')->name('schedule.index'); 
@@ -30,4 +30,4 @@ Route::get('/', function () {
     Route::post('/schedule/post', 'ScheduleController@postSchedule')->name('schedule.post');
     Route::post('/schedule/delete', 'ScheduleController@deleteSchedule')->name('schedule.delete');
     
-// });
+});
