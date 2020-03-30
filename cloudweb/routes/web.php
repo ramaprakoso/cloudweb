@@ -15,8 +15,7 @@
 // Route::post('/login', 'Auth\LoginController@postLogin');
 // Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-Auth::routes(['verify' => true]);
-
+// Auth::routes(['verify' => true]);
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
@@ -25,7 +24,7 @@ Route::get('/', function () {
 
 
 
-Route::group(['middleware' => 'auth'], function () {
+// Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'ScheduleController@index')->name('dashboard');
     Route::get('/home', 'HomeController@index')->name('member.home');
     Route::get('/schedule', 'ScheduleController@index')->name('schedule.index'); 
@@ -34,4 +33,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/schedule/post', 'ScheduleController@postSchedule')->name('schedule.post');
     Route::post('/schedule/delete', 'ScheduleController@deleteSchedule')->name('schedule.delete');
     
-});
+// });
