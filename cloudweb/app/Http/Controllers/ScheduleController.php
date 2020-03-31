@@ -35,7 +35,7 @@ class ScheduleController extends BaseController
 
     public function postSchedule(Request $request){
         $data = $request->all(); 
-
+        
         if(isset($data['id'])){
             $update_schedule_query = MSchedule::where('id', $data['id'])
             ->whereNull('deleted_at')
@@ -50,7 +50,7 @@ class ScheduleController extends BaseController
             $create_schedule_query = MSchedule::insert([
                 'description' => $data['description'],
                 'time_schedule' => $data['date_time'],
-                'url' => $data['description'],
+                'url' => $data['url'],
                 'requirement' => $data['requirement'],
                 'created_at' => date('Y-m-d H:i:s')
             ]); 
@@ -77,11 +77,12 @@ class ScheduleController extends BaseController
 
     public function deleteSchedule(Request $request){
         $id = $request->id; 
-        $create_sql = MSchedule::update([
-            'deleted_at' => date('Y-m-d H:i:s')
-        ])
+        $create_sql = MSchedule::where('id', $id)
         ->whereNull('deleted_at')
-        ->where('id', $id); 
+        ->update([
+            'deleted_at' => date('Y-m-d H:i:s')
+        ]); 
+        
     }
 }
 

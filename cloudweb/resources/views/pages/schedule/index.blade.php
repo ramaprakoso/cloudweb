@@ -99,7 +99,7 @@
             </fieldset>  
             <fieldset class="form-group floating-label-form-group">
                 <label for="site_id">Link</label>
-                <input type="text" class="form-control" id="url" placeholder="Url">
+                <input type="text" class="form-control" id="url" name="url" placeholder="Url">
             </fieldset>  
             <fieldset class="form-group floating-label-form-group">
                 <label>Requirement</label>
@@ -170,7 +170,7 @@ $(document).ready(function(){
     $(document).on('click', '#btn-delete', function(e) {
       var id = $(this).data('id'); 
       swal({
-                title: "Apakah anda yakin untuk update DATEK NOT OK?",
+                title: "Apakah anda yakin untuk delete Schedule?",
                 text: "Klik cancel untuk membatalkan",
                 buttons: true,
                 dangerMode: true
@@ -178,6 +178,11 @@ $(document).ready(function(){
                 if (!isReady) {
                     throw null;
                 }
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
                 $.ajax({
                     type: 'POST',
                     data: {id : id},
@@ -193,7 +198,7 @@ $(document).ready(function(){
     $(document).on('submit', '#schedule_form', function(e){
         e.preventDefault(); 
         var form_data = $("#schedule_form").serializeArray();
-
+        console.log(form_data); 
         $.ajax({
               type: 'POST',
               url: "{{ route('schedule.post') }}",
