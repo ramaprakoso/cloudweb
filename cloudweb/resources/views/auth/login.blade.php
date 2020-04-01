@@ -68,7 +68,7 @@
                                                         <i class="la la-key"></i>
                                                     </div>
                                                 </fieldset>
-                                                <button type="submit" class="btn btn-info btn-block"><i class="ft-unlock"></i> Login</button>
+                                                <button type="submit" class="btn btn-info btn-block"><i class="ft-unlock"></i> Password default aja</button>
                                             </form>
                                         </div>
                                     </div>

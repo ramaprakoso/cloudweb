@@ -9,7 +9,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand" href=""><img class="brand-logo" alt="modern admin logo" src="{{url('assets/images/logo/logo.png')}}">
-                        <h3 class="brand-text">Datacomm</h3>
+                        <h3 class="brand-text">Belajar Bareng Mierebustelur</h3>
                     </a>
                 </li>
                 <li class="nav-item d-md-none">
